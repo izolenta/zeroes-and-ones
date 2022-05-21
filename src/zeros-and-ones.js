@@ -1,8 +1,7 @@
 import brain from "brain.js";
-import {convolution} from "brain.js/dist/src/layer/index.js";
 
 const config = {
-  hiddenLayers: [8],
+  hiddenLayers: [5],
   activation: 'sigmoid',
 };
 
@@ -43,5 +42,5 @@ net.train([
   { input: [1, 1, 1, 1, 1], output: [1] },
 ]);
 
-const output = net.run([0, 0, 0, 0, 1]);
-console.log(output);
+const output = net.run([0, 0, 1, 0, 1]);
+console.log(output[0]);
